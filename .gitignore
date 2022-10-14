@@ -1,0 +1,8 @@
+.scannerwork/
+build/
+coverage/
+logs/
+node_modules/
+.env
+scanner.js
+sonar-project.properties

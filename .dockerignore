@@ -1,0 +1,15 @@
+coverage/
+logs/
+node_modules/
+screenshots
+src/
+.dockerignore
+.env.sample
+.eslintignore
+.eslintrc.js
+.gitignore
+.prettierrc
+jest.config.js
+nodemon.json
+README.md
+tsconfig.json

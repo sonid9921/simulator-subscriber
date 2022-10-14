@@ -1,0 +1,21 @@
+services:
+  mongo:
+    image: mongo
+    container_name: mongo_db
+    volumes:
+      - mongodb:/data
+  node:
+    image: node
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      MONGO_URI: mongodb://mongo_db:27017
+    env_file: ./.env
+    volumes:
+      - .:/app
+    depends_on:
+      - mongo
+    command: ["npm", "run", "start:docker"]
+volumes:
+  mongodb:
